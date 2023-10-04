@@ -1,0 +1,105 @@
+:root{
+    --primary:#fda215;
+    --secondary:#31485a;
+    --light:#bcceda;
+    --bg:#fcfcfc;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+}
+
+.container{
+    box-sizing: border-box;
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+nav>span{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav>button{
+    padding: 10px 15px;
+    background-color: var(--primary);
+    border-radius: 20px;
+    font-weight: bold;
+    color: var(--bg);
+    border: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#gameField{
+    width: 80vw;
+    height: 80vw;
+    max-width: 400px;
+    max-height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.card{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--bg);
+    font-weight: bold;
+    position: relative;
+}
+
+.card>span{
+    position: absolute;
+}
+
+#hud{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#hud>div{
+    background-color: var(--light);
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+.selected{
+    background-color: var(--primary);
+}
+
+.good{
+    background-color: var(--light);
+}
