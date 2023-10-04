@@ -1,5 +1,5 @@
 let cards = document.getElementsByClassName("card");
-let back = [1,2,3,4,5,6,7,8]
+let back = ["🌹","🥀","🌺","🌷","🌻","🌸","⚽","😺"]
 let moves = document.getElementById("moves")
 let time = document.getElementById("time")
 
@@ -11,6 +11,7 @@ let intervalID = setInterval(() => {
 
     time.innerText = (min < 10 ? "0"+min : min) +
                     ":" + (sec < 10 ? "0"+sec : sec)
+                    testWin()
 }, 1000);
 
 back = [...back, ...back]
@@ -23,7 +24,6 @@ let makeSpan = (i)=> {
 let testWin = () =>{
     if (cards.length ===document.getElementsByClassName("good").length) {
         alert("You WIN!")
-        clearInterval(intervalID)
     }
 }
 
@@ -60,8 +60,11 @@ for(let i = 0; i < cards.length; i++){
         cards[i].innerHTML = makeSpan(i)
         cards[i].classList.add("selected")
         testPair()
-        testWin()
         
         
     })
+}
+
+function NewGame(){
+   location.reload()
 }
